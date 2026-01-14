@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración</title>
+    <style>
+        body { 
+            font-family: 'Handlee', cursive; 
+            background: #f4f4f4; 
+            padding: 20px; 
+        }
+        .admin-card {
+            background: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 15px;
+            box-shadow: 8px 8px 0 #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #27ae60;
+            color: white;
+        }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-card">
+        <h2>👥 Usuarios Registrados (Admin)</h2>
+        <p>Esta es la lista oculta de la comunidad de reciclaje.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Contraseña</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for u in usuarios %}
+                <tr>
+                    <td>{{ u.id }}</td>
+                    <td>{{ u.nombre }}</td>
+                    <td>{{ u.email }}</td>
+                    <td>{{ u.password }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="/" class="back-btn">← Volver al Inicio Público</a>
+    </div>
+</body>
+</html>
