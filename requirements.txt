@@ -3,4 +3,5 @@ flask_sqlalchemy
 gunicorn 
 Flask 
 Werkzeug 
-flask_loginD
+
+flask_login
