@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro - Reciclaje</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+        body { font-family: 'Handlee', cursive; background: #eaffea; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 30px; border: 3px solid #333; border-radius: 20px; box-shadow: 8px 8px 0 #333; width: 320px; text-align: center; }
+        input, textarea { display: block; width: 100%; padding: 10px; margin: 10px 0; border: 2px solid #333; border-radius: 8px; box-sizing: border-box; font-family: 'Handlee', cursive; }
+        
+        textarea { height: 100px; resize: none; background: #f9f9f9; }
+        .btn { background: #2ecc71; border: 2px solid #333; padding: 10px; border-radius: 10px; cursor: pointer; font-weight: bold; width: 100%; font-family: 'Handlee', cursive; }
+        .btn:hover { background: #27ae60; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 style="color: #27ae60;">📝 Comparte tu Idea</h2>
+        <form action="/registrar" method="POST">
+            <input type="text" name="nombre" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Email" required>
+            
+            <textarea name="comentario" placeholder="¿Cuál es tu idea creativa para reciclar?" required></textarea>
+            
+            <button type="submit" class="btn">¡Publicar Idea!</button>
+        </form>
+        <p style="margin-top: 15px; font-size: 0.8em;"><a href="/" style="color: #333;">Volver al inicio</a></p>
+    </div>
+</body>
+</html>
